@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>External</title>
+    <style>
+     #pattern{
+      background-color: rgb(167, 105, 225);
+      font-weight: bold;
+      font-size: large;
+     }
+        body{
+            background-color: bisque;
+        }
+       
+    </style>
+</head>
+<body>
+  <center>
+    <h3>Enter the number of rows</h3>
+    <input type="number" id="rows" min="1" />
+    <br><br>
+    <button onclick="printPattern()">Generate Pattern</button>
+  </center>  
+
+  <pre id="pattern"></pre>
+
+  <script>
+    function printPattern() {
+      let n = document.getElementById("rows").value;
+      let output = "";
+      for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= i; j++) {
+          output += j + " ";
+        }
+        output += "\n";
+      }
+      document.getElementById("pattern").textContent = output;
+    }
+  </script>
+</body>
+</html>
